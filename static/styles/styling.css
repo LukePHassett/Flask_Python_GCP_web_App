@@ -1,0 +1,169 @@
+body{
+
+}
+
+.sqr-area {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  flex-direction: row;
+
+  border: 1px solid silver;
+  -ms-box-orient: horizontal;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.sqr-lbl{
+  margin-top: -10%;
+  margin-bottom: 5%;
+  /*flex: 1;*/
+  height: 5vh;
+    /*height: 10%;*/
+  background-color: rgba(1,1,1,0);
+    font-size: 100%;
+    /*!*justify-content: center;*!*/
+
+}
+.sqr-item {
+  background: tomato;
+  padding: 1%;
+  width: 50vh;
+  height: 50vh;
+  margin: 2%;
+
+  line-height: 100px;
+  color: white;
+  font-weight: bold;
+  font-size: 2em;
+  text-align: center;
+
+  /*display: flex;*/
+  /*flex-direction: column;*/
+  /*align-items: center;*/
+}
+.sqr-contents{
+  /*background-color: #111111;*/
+  padding: 0;
+  /*margin-left: 5%;*/
+  /*margin-right: 5%;*/
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /*flex-wrap: wrap;*/
+
+}
+
+img.sqr-contents{
+  /*background-color: darkblue;*/
+  border: 5px solid blueviolet;
+  display: flex;
+  /*flex: 0.5;*/
+  width: 90%;
+  height: 80%;
+
+}
+
+.sqr-item:hover{
+    background-color: #111111;
+}
+
+.sqr-title {
+  flex: 0.2;
+  font-size: 100%;
+  color: chartreuse;
+  /*position: relative;*/
+  /*height:100%;*/
+  /*justify-content: center;*/
+}
+
+#itemPage.sqr-area{
+  background-color: #111111;
+}
+
+#itemPage.sqr-item {
+  background: blueviolet;
+  padding: 1%;
+  width: 50vh;
+  height: 50vh;
+  margin: 2%;
+
+  line-height: 100px;
+  color: white;
+  font-weight: bold;
+  font-size: 2em;
+  text-align: center;
+
+  /*display: flex;*/
+  /*flex-direction: column;*/
+  /*align-items: center;*/
+}
+
+
+
+
+
+#prod-area{
+  background-color: fuchsia;
+  display: flex;
+  flex:0.8;
+  /*align-self: stretch;*/
+  /*padding: 10%;*/
+  /*align-items: stretch;*/
+  /*width: 100%;*/
+  /*height: 30vh;*/
+
+  border: 5px solid blueviolet;
+
+  /*justify-content: center;*/
+}
+
+
+
+
+#jsOUT{
+  background: tomato;
+  padding: 5px;
+  width: 50vh;
+  height: 50vh;
+  margin: 2%;
+
+  line-height: 100px;
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center;
+
+}
+
+.holding{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  flex-direction: row;
+
+  border: 1px solid silver;
+  -ms-box-orient: horizontal;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+
+}
+
+#jsOUT:hover{
+  background-color: #111111;
+}

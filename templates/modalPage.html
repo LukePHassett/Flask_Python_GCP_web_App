@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="{{ url_for('static', filename='scripts/navHandler.js') }}"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='styles/modal.css') }}">
+  <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+
+</head>
+<body>
+    <div class="heading">
+    <h1 class="title" id="hehe">Admin Page</h1>
+    {% include 'comps/compAUTH.html' %}
+</div>
+
+    {% include 'comps/config.html'%}
+    {% include 'comps/compNAV.html' %}
+
+<table class="table-responsive-xl table-striped table-hover table-dark" id="prod-table" >
+
+  <thead>
+    <tr>
+      <th  scope="col">ID</th>
+      <th  scope="col">Name</th>
+      <th  scope="col">Desc</th>
+      <th  scope="col">Cost</th>
+      <th  scope="col">Stock</th>
+      <th class="table-img" scope="col">Image</th>
+      <th  scope="col">Delete</th>
+      <th  scope="col">Edit</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    {% for x in histories %}
+    <tr>
+      <form action="/updateItem" method="post">
+      <th contenteditable="false" scope="row" name="id"  action="/updateItem" method="POST">{{x['Item ID']}}</th>
+      <td><input class="table-input" name="name" value="{{x['Item Name']}}"></td>
+      <td><input class="table-input" name="desc" value="{{x['Item Desc']}}"></td>
+      <td><input class="table-input" name="cost" value="{{x['Cost']}}"></td>
+      <td><input class="table-input" name="quant" value="{{x['In Stock']}}"></td>
+      <td><input name="img" value="{{x['Item Picture']}}"></td>
+        <td contenteditable="false"><button name="del" value="{{x['Item ID']}}" type="submit" formaction="/updateItem/{{x['Item ID']}}" class="btn btn-danger">Del</button></td>
+      <td contenteditable="false">
+
+    <button name="foo" value="{{x['Item ID']}}" type="submit" class="btn btn-secondary">Update</button>
+
+
+    <script>(function edit(){
+    'use-strict';
+
+    var td = document.getElementsByTagName('input');
+    var open = false;
+    for(var i=0;i<td.length;i++) {
+        td[i].isContentEditable = false;
+        td[i].addEventListener('click', change, false);
+        // td[i].addEventListener('blur', changeback, false);
+    }
+
+    function change() {
+      open = true;
+      disabled = true;
+    }
+    function changeback() {
+        this.removeAttribute("contentEditable");
+    }
+}());</script>
+</form>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+
+</table>
+
+
+
+
+<div class="buttons">
+  <h2>Manage Content</h2>
+  <p>Manage all aspects of the website here using the various buttons to open modals</p>
+
+  <!-- Button to Open the Modal -->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#userModal">
+    New User
+  </button>
+
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#prodModal">
+    New Item
+  </button>
+
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#adminModal">
+    New Admin
+  </button>
+
+
+  {% include "modals/newProductModal.html" %}
+  {% include "modals/userModal.html" %}
+  {% include "modals/newAdminModal.html" %}
+
+
+
+
+
+</div>
+  {% extends "modals/modal.html" %}
+    {% block id %}
+      <div class="modal fade" id="theModalest">
+      {% endblock %}
+
+  </div>
+
+
+
+
+</div>
+
+
+</body>
+</html>

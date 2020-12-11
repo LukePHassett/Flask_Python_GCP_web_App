@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='styles/stylingSQR.css') }}"></head>
+
+<body style="overflow-y: -moz-scrollbars-none">
+    {% block body %}
+    <div class="sqr-area" style="overflow-y: scroll">
+        <div class="sqr-item">
+            {% block content %}
+
+            {% for items in basket %}
+            <a href="/item"><div class="sqr-contents" id="bskt-item"></div></a>
+            {% endfor %}
+            {% endblock %}
+        </div>
+    </div>
+
+{% endblock %}
+</body>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+
+</head>
+<body>
+<div class="heading">
+    {% block header %}
+    <h1>WAGWAN</h1>
+    {% endblock %}
+    {% include 'comps/logOut.html' %}
+</div>
+</body>
+</html>

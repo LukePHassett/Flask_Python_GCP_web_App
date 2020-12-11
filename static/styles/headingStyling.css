@@ -1,0 +1,180 @@
+body {
+  font-family: "helvetica", sans-serif;
+  text-align: center;
+}
+
+.heading{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1%;
+  background-color: #bb86fc99;
+  width: 90%;
+  height: 10vh;
+  overflow: hidden;
+  display: flex;
+  /*flex-direction: row;*/
+  justify-content: space-between;
+
+  border-right: #626793 solid 2px;
+  border-left: #414562 solid 1px;
+
+  border-top-left-radius: 1vh;
+  border-top-right-radius: 1vh;
+  /*overflow: -moz-scrollbars-vertical;*/
+
+}
+#sign-out{
+  width:10%;
+  height: 80%;
+  justify-content: right;
+
+  margin-left: auto;
+  margin-right: 0;
+}
+
+/*.firebaseui-container{*/
+/*  height: 10%;*/
+/*}*/
+
+/*.firebaseui-card-content{*/
+/*  display: grid;*/
+/*  grid-row: 1;*/
+/*  grid-column: 1;*/
+/*  padding: 0;*/
+/*  width: 30%;*/
+
+/*}*/
+/*.firebaseui-form-actions{*/
+/*  width: 30%;*/
+/*  padding:0;*/
+/*  margin-right: 0;*/
+/*  display: flex;*/
+/*  flex-direction: row;*/
+/*  flex-wrap: wrap;*/
+/*}*/
+
+/*.firebaseui-id-submit{*/
+/*  height: 100%;*/
+/*  padding-bottom: 10%;*/
+/*}*/
+
+/*.firebaseui-textfield{*/
+/*  margin: 0;*/
+/*}*/
+
+/*.firebaseui-form-links{*/
+/*  display: none;*/
+/*}*/
+/*.firebaseui-card-actions{*/
+/*  width: 20%;*/
+/*  padding: 2%;*/
+/*}*/
+/*.firebaseui-card-header{*/
+/*  display: none;*/
+/*}*/
+/*.firebaseui-button{*/
+/*  width: 100%;*/
+/*  position: relative;*/
+
+/*}*/
+
+/*.firebasui-id-page-sign-in{*/
+/*  background-color: bisque;*/
+/*  flex-flow: wrap;*/
+/*}*/
+
+.firebaseui-card-content {
+    width: 40% !important;
+}
+
+.firebaseui-idp-button, .firebaseui-tenant-button {
+    /* direction: ltr; */
+    /*font-weight: 500;*/
+    /* height: auto; */
+    line-height: normal !important;
+    /*max-width: 220px;*/
+    /* min-height: 40px; */
+    padding: 0 !important;
+    margin: 0 !important;
+    text-align: left;
+    width: 120%;
+    height: 5% !important;
+}
+/*.firebaseui-idp-list{*/
+/*  width: 200%;*/
+/*}*/
+/*.firebaseui-list-item{*/
+/*  margin-right: 10%;*/
+/*}*/
+/*.firebaseui-id-page-sign-in{*/
+/*  height: 1%;*/
+/*  background-color: chocolate;*/
+/*  padding: 0;*/
+/*  margin-bottom: 10%;*/
+/*}*/
+/*.mdl-card{*/
+/*  position: absolute;*/
+/*  background-color: cyan;*/
+/*  height: 2%;*/
+/*  margin: 0;*/
+/*  padding: 0;*/
+/*}*/
+/*.firebaseui-container{*/
+/*  position: absolute;*/
+/*background-color: red;*/
+/*  height: 10%;*/
+/*  width: 50%;*/
+/*}*/
+
+.firebaseui-container.mdl-card {
+    /*overflow: hidden;*/
+    width: 50% !important;
+    height: 5vh !important;
+}
+.title{
+  color: aliceblue;
+  font-size: 9vh;
+  font-weight: bold;
+  padding-left: 1%;
+  padding-top: 0;
+  margin:0;
+}
+
+#page-sign-in{
+  height: 10%;
+}
+.firebaseui-container {
+    background-color: transparent;
+    -moz-box-sizing: border-box;
+    font: 16px Roboto,arial,sans-serif;
+    margin: 0 auto;
+    width: 120% !important;
+}
+
+.firebaseui-card-content {
+    padding: 5% 5%;
+}
+.firebaseui-card-content {
+    width: 70% !important;
+}
+
+.firebaseui-idp-list, .firebaseui-tenant-list {
+    list-style: none;
+    margin: 0 !important;
+    margin-top: 10% !important;
+    border-radius: 10% !important;
+    padding: 0 !important;
+}
+/*.firebaseui-id-page-password-sign-in{*/
+/*  background-color: thistle;*/
+/*  padding-right: 10%;*/
+/*  height: 25%;*/
+/*}*/
+/*.firebaseui-id-page-sign-in{*/
+/*    position: absolute;*/
+/*  background-color: cyan;*/
+/*  height: 2%;*/
+/*  margin: 0;*/
+/*  padding: 0;*/
+
+/*}*/

@@ -1,0 +1,81 @@
+.square {
+  /*display: flex;*/
+  /*!*flex-direction: row;*!*/
+  /*flex:1;*/
+  /*!*border-color: #9C1A1C;*!*/
+  /*border: aliceblue;*/
+  background-color: #111111;
+  /*border: #9C1A1C;*/
+  display: flex;
+  flex: 0.3;
+  height: 30vh;
+}
+
+.sqr-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  flex-direction: row;
+
+  border: 1px solid silver;
+  -ms-box-orient: horizontal;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.sqr-item {
+  background: tomato;
+  padding: 5px;
+  width: 40vh;
+  height: 40vh;
+  margin: 5%;
+
+  line-height: 100px;
+  color: white;
+  font-weight: bold;
+  font-size: 2em;
+  text-align: center;
+}
+
+.parent{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 90vh;
+  /*flex-direction: row;*/
+  /*justify-content: space-evenly;*/
+  /*flex-wrap: wrap;*/
+  background-color: blueviolet;
+  /*width: 100%;*/
+  /*height: 100%;*/
+}
+.content {
+  /*display: flex;*/
+  /*flex-direction: row;*/
+  /*flex: 0.3;*/
+  /*flex-wrap: wrap;*/
+  /*color: chartreuse;*/
+  /*background-color: #9C1A1C;*/
+  /*border: blue;*/
+  /*position: absolute;*/
+  /*!*width: 100%;*!*/
+  /*!*height: 100%;*!*/
+}
+
+/*#holder{*/
+/*  display: flex;*/
+/*  flex-direction: row;*/
+/*  flex:1;*/
+/*  width:100%;*/
+/*  height: 10%;*/
+/*  background-color: #42005a;*/
+/*  color: #2aabd2;*/
+/*}*/

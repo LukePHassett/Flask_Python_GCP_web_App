@@ -1,0 +1,20 @@
+.square {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  position: relative;
+  background-color: #8c8c8c;
+  width: 20%;
+}
+
+.square:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}

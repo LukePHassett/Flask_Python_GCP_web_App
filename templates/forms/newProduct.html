@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="{{ url_for('static', filename='scripts/newUser.js') }}"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='styles/register.css') }}">
+</head>
+<body>
+            <div class="form-style-8">
+            <form id="registerForm" onsubmit="return validateForm()" action="/createItem" method="POST">
+              <label class="reg-lbl" for="name">Item Name</label><br>
+              <input class="reg-inp" type="text" id="name" name="name"><br><br>
+              <label class="reg-lbl" for="cost">Item Cost</label><br>
+              <input class="reg-inp" type="text" id="cost" name="cost"><br><br>
+              <label class="reg-lbl" for="desc">Item Description</label><br>
+              <input class="reg-inp" type="text" id="desc" name="desc"><br><br>
+              <label class="reg-lbl" for="img">Item Img</label><br>
+              <input class="reg-inp" type="text" id="img" name="img"><br><br>
+              <label class="reg-lbl" for="quant">Item Stock</label><br>
+              <input class="reg-inp" type="number" id="quant" name="quant"><br><br>
+              <input id="create" type="submit" value="Submit">
+            </form>
+            </div>
+</body>
+</html>

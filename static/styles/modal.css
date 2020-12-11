@@ -1,0 +1,25 @@
+/*#myModal{*/
+/*    background-color: #9C1A1C;*/
+/*}*/
+/*.modal-body{*/
+/*    background-color: #2aabd2;*/
+/*    width: 90% !important;*/
+/*}*/
+.modal-content{
+    background-color: #bb86fc;
+    width: 200% !important;
+    margin-right: auto;
+    margin-left: auto;
+    left: 0;
+
+}
+.modal{
+    /*width: 150%;*/
+    margin-left: auto;
+    margin-right: auto;
+}
+
+::-webkit-scrollbar{
+    overflow-y: -moz-scrollbars-none;
+    display: none;
+}

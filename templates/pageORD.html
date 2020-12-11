@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>ORDERS</title>
+        <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+</head>
+<body>
+    <div class="heading">
+    <h1 class="title">RIP LOOK HOW MUCH YOU SPENT</h1>
+    {% include 'comps/compAUTH.html' %}
+    </div>
+    {% include 'comps/compNAV.html' %}
+    {% include 'comps/config.html'%}
+
+<!--Generates tiles from list of previous orders fetched from FireBase-->
+    <div>
+    {% extends "comps/sqrArea.html" %}
+            {% block content %}
+                {% for item in basket %}
+                        <div class="titleArea">
+                    <p class="ord-lbl">{{item['Ordered']}}</p>
+                    <p>{{item['Order ID']}}</p>
+                </div>
+                <div class="sqr-contents" id="ord-holder">
+                <a href="/basket/{{item['Order ID']}}"><div class="ord-itm">
+
+                    {% set bsktimg = item.values()[0] %}
+                    <p>{{bsktimg}}</p>
+                    <img class="ord-img" src="{{url_for('static', filename='images/menu.png')}}">
+                <div class="order-box" style="overflow-y: scroll">
+                    {% if hist != False%}
+                    {% for bskt in item['Items'] %}
+                    <a href="/item/{{bskt['Item ID']}}"><div class="ord-bskt">{{bskt['Item Name']}}</div></a>
+                    {% endfor %}
+                </div>
+                    <p class="bskt-price"> THE PRICE</p>
+                </div></a>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        {% endblock %}
+    </div>
+</body>
+</html>

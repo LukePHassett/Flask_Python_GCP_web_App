@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='styles/modal.css') }}">
+
+</head>
+<body>
+{% block id %}
+<div class="modal fade" id="myModal">
+{% endblock %}
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+            {% block header %}
+          <h4 class="modal-title">Modal Heading</h4>
+            {% endblock %}
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <!-- Modal body -->
+
+
+            <div class="modal-body">
+                {% block body %}
+                {% for t in items %}
+                    <p>{{items}}</p>
+                <p>WTFFFFFF</p>
+                {% endfor %}}
+                <p>INHERITANCE</p>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown button
+                    </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    {% for x in histories %}
+
+                        <button type="button" class="btn btn-secondary {{x['Item Name']}}"  id="{{x['Item Name']}}" value="{{histories}}" onclick=it(id.toString())>
+                            {{x['Item Name']}}
+                            {% set nameITM = x['Item Name'] %}
+
+                            <script>
+                                var hist = '{{histories| tojson | safe}}';
+                                leng = hist.toString().slice(1,-1);
+                                now = leng.split("{").pop().split("},");
+                                for(i in now){
+                                    console.log(now[i]);
+                                }
+
+                                function it(data){
+                                    window.alert(leng);
+                                    console.log(leng);
+                                var lst = [];
+;
+
+                                // var trying = document.getElementById(data);
+                                // window.alert(hist);
+                                // lst.push(trying.split("{'").split("},"));
+
+                                for(i in trying.split(" },")){
+                                    // window.alert(i)
+                                }
+
+                                "{% set selecetd = x %}"
+
+
+                            }
+                            function setITM(item){
+                                window.alert(item)
+                                return item;
+                            }
+                            </script>
+
+                        </button>
+                    {% endfor %}
+                </div>
+
+              <div class="form-style-8">
+              <form id="registerForm" onsubmit="return validateForm()" action="" method="POST">
+              <label class="reg-lbl" for="name">Item Name</label><br>
+              <input class="reg-inp" type="text" id="name" name="name" value=""><br><br>
+              <label class="reg-lbl" for="cost">Item Cost</label><br>
+              <input class="reg-inp" type="text" id="cost" name="cost"><br><br>
+              <label class="reg-lbl" for="desc">Item Description</label><br>
+              <input class="reg-inp" type="text" id="desc" name="desc"><br><br>
+              <label class="reg-lbl" for="img">Item Img</label><br>
+              <input class="reg-inp" type="text" id="img" name="img"><br><br>
+              <label class="reg-lbl" for="quant">Item Stock</label><br>
+              <input class="reg-inp" type="number" id="quant" name="quant"><br><br>
+              <input id="create" type="submit" value="Submit">
+            </form>
+            </div>
+                {% endblock %}
+            </div>
+
+
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+
+      </div>
+    </div>
+</div>
+</div>
+</body>
+</html>

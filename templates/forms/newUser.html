@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="{{ url_for('static', filename='scripts/newUser.js') }}"></script>
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='styles/register.css') }}">
+</head>
+<body>
+            <div class="form-style-8">
+            <form id="registerForm" onsubmit="return validateForm()" action="/create" method="POST">
+              <label class="reg-lbl" for="name">Name</label><br>
+              <input class="reg-inp" type="text" id="name" name="name"><br><br>
+              <label class="reg-lbl" for="email">Email</label><br>
+              <input class="reg-inp" type="text" id="email" name="email"><br><br>
+              <label class="reg-lbl" for="pass">Pass</label><br>
+              <input class="reg-inp" type="password" id="pass" name="pass"><br><br>
+              <input id="create" type="submit" value="Submit">
+            </form>
+            </div>
+</body>
+</html>

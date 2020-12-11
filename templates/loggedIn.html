@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="{{ url_for('static', filename='scripts/script.js') }}"></script>
+    <script src="{{ url_for('static', filename='scripts/imageRetrieve.js') }}"></script>
+
+<!--    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">-->
+    <script src="https://www.gstatic.com/firebasejs/ui/4.5.0/firebase-ui-auth.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.5.0/firebase-ui-auth.css">
+
+</head>
+<body>
+<div class="heading">
+    <h1>YOU MADE IT</h1>
+
+    {% include 'comps/logOut.html' %}
+</div>
+
+        {% include 'comps/compNAV.html' %}
+</body>
+<body>
+
+    <div ><p>FIREBASE IMAGE</p>
+            <img src="../static/images/menu.png" id="myimg">
+    </div>
+    <script>
+        document.getElementById("myimg").src= getImage()
+        // document.getElementById("myimg").src= "https://firebasestorage.googleapis.com/v0/b/ad-lab-project-1.appspot.com/o/img%2Fcompass.jpg?alt=media&token=0104defb-c724-4a83-aff4-0cae0c40f4d0"
+    // window.alert(findIT().toString())
+    </script>
+
+    <div>
+    {% extends "comps/sqrArea.html" %}
+            {% block content %}
+                {% for item in basket %}
+                <a href="item"><div class="sqr-contents" id="bskt-holder">
+                <p class="bskt-lbl">{{item}}</p>
+                <div class="bskt-itm">
+                    <img class="bskt-img" src="{{ url_for('static', filename='images/chefHat.png') }}">
+                    <p class="bskt-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim </p>
+                    <p class="itm-price"> THE PRICE</p>
+                </div>
+                </div></a>
+            {% endfor %}
+        {% endblock %}
+    </div>
+
+
+
+
+
+    {% include 'comps/config.html'%}
+
+
+<!--   <div id="firebaseui-auth-container"></div>-->
+
+
+<!--  <button id="sign-out" hidden=true>Sign Out</button>-->
+
+<!--  <div id="login-info" hidden=true>-->
+<!--    <h2>Login info:</h2>-->
+<!--    {% if user_data %}    <dl>-->
+<!--        <dt>Name</dt><dd>{{ user_data['name'] }}</dd>-->
+<!--        <dt>Email</dt><dd>{{ user_data['email'] }}</dd>-->
+
+<!--        <dt>Last 10 visits</dt><dd>-->
+<!--          {% for time in times %}          <p>{{ time['timestamp'] }}</p>-->
+<!--          {% endfor %} </dd>-->
+<!--      </dl>-->
+<!--    {% elif error_message %}    <p>Error: {{ error_message }}</p>-->
+<!--    {% endif %}</div>-->
+
+<!--    &lt;!&ndash; The core Firebase JS SDK is always required and must be listed first &ndash;&gt;-->
+<!--<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>-->
+
+<!--<script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-auth.js"></script>-->
+
+<!--<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-analytics.js"></script>-->
+<!--<script>-->
+<!--  // Your web app's Firebase configuration-->
+<!--  // For Firebase JS SDK v7.20.0 and later, measurementId is optional-->
+<!--  var firebaseConfig = {-->
+<!--    apiKey: "AIzaSyD3a25xkACRialIzFRCjqANcstFXTnrjPU",-->
+<!--    authDomain: "ad-lab-project-1.firebaseapp.com/basket",-->
+<!--    databaseURL: "https://ad-lab-project-1.firebaseio.com",-->
+<!--    projectId: "ad-lab-project-1",-->
+<!--    storageBucket: "ad-lab-project-1.appspot.com",-->
+<!--    messagingSenderId: "161926036155",-->
+<!--    appId: "1:161926036155:web:8025775dd321c88356879e",-->
+<!--    measurementId: "G-5QKVQXNXB4"-->
+<!--  };-->
+<!--  // Initialize Firebase-->
+<!--  firebase.initializeApp(firebaseConfig);-->
+<!--  firebase.analytics();-->
+<!--</script>-->
+</body>
+</html>

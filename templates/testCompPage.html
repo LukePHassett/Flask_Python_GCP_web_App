@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <section typeof="ul" class="sqr-container">
+    {% for page in pages %}
+        <a href={{page}}>
+            <li class="sqr-item">{{page}}</li>
+        </a>
+    {% endfor %}
+    </section>
+</body>
+</html>

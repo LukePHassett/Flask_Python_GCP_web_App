@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% extends "modals/modal.html" %}
+{% block id %}
+<div class="modal fade" id="adminModal">
+{% endblock %}
+{% block body %}
+{% include "forms/newAdmin.html" %}
+    <table class="table-responsive table-striped table-hover table-dark" id="prod-table" >
+  <thead>
+    <tr>
+      <th  scope="col">ID</th>
+      <th  scope="col">Name</th>
+      <th  scope="col">Make Admin</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for x in item %}
+
+    <tr>
+      <form action="/admin/create/{{x['User ID']}}" method="post">
+      <th contenteditable="false" scope="row" name="id" method="POST">{{x['User ID']}}</th>
+      <td name="id"> {{x['User ID']}}</td>
+      <td name="name">{{x['User Name']}}</td>
+      <td contenteditable="false">
+
+    <button name="uid" value="{{x['Item ID']}}">Make Admin</button>
+    <button formaction="/admin/delete/{{x['User ID']}}" value="{{x['Item ID']}}">Remove Admin</button>
+      </td>
+      </form>
+    </tr>
+  {% endfor %}
+  </tbody>
+
+</table>
+</div>
+{% endblock %}
+</body>
+</html>
