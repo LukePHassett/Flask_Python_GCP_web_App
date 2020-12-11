@@ -8,14 +8,14 @@ from google.cloud import datastore
 import google.oauth2.id_token
 
 config = {
-    "apiKey": "AIzaSyD3a25xkACRialIzFRCjqANcstFXTnrjPU",
-    "authDomain": "ad-lab-project-1.firebaseapp.com",
-    "databaseURL": "https://ad-lab-project-1.firebaseio.com",
-    "projectId": "ad-lab-project-1",
-    "storageBucket": "ad-lab-project-1.appspot.com",
-    "messagingSenderId": "161926036155",
-    "appId": "1:161926036155:web:8025775dd321c88356879e",
-    "measurementId": "G-5QKVQXNXB4"
+    apiKey: "Your app details here",
+    authDomain: "Your app details here",
+    databaseURL: "Your app details here",
+    projectId: "Your app details here",
+    storageBucket: "Your app details here",
+    messagingSenderId: "Your app details here",
+    appId: "Your app details here",
+    measurementId: "Your app details here"
 
 }
 firebase = pyrebase.initialize_app(config)
